@@ -1,0 +1,210 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/css/form-overlay-addon/frontend.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* =============================================================== *\
+   Design Tokens
+
+   Farbskalen:
+   --ud-{category}-{scale} (100–900)
+   positive | warning | error | info | neutral
+
+   Beispiel:
+   var(--ud-positive-500)
+
+   Semantische Tokens:
+   --ud-color-{success | warning | error | info | text | text-muted | bg | surface | border}
+\* =============================================================== */
+:root {
+  --ud-positive-100: #fbfefc;
+  --ud-positive-200: #e6f9ec;
+  --ud-positive-300: #d1f3da;
+  --ud-positive-400: #b0ebc6;
+  --ud-positive-500: #30a46c;
+  --ud-positive-600: #299764;
+  --ud-positive-700: #18794e;
+  --ud-positive-800: #193b2d;
+  --ud-positive-900: #0d1912;
+  --ud-warning-100: #fefdfb;
+  --ud-warning-200: #fef6e7;
+  --ud-warning-300: #ffedc7;
+  --ud-warning-400: #ffd386;
+  --ud-warning-500: #f5a623;
+  --ud-warning-600: #e08d00;
+  --ud-warning-700: #ad5700;
+  --ud-warning-800: #5f2a00;
+  --ud-warning-900: #341500;
+  --ud-error-100: #fffcfc;
+  --ud-error-200: #fef0ef;
+  --ud-error-300: #fdd8d7;
+  --ud-error-400: #fbb5b4;
+  --ud-error-500: #e5484d;
+  --ud-error-600: #d93d42;
+  --ud-error-700: #cd2b31;
+  --ud-error-800: #381316;
+  --ud-error-900: #1f0a0a;
+  --ud-info-100: #fbfdff;
+  --ud-info-200: #edf6ff;
+  --ud-info-300: #e1f0ff;
+  --ud-info-400: #cee7fe;
+  --ud-info-500: #0091ff;
+  --ud-info-600: #0880ea;
+  --ud-info-700: #0b68cb;
+  --ud-info-800: #113264;
+  --ud-info-900: #0a0e1c;
+  --ud-neutral-100: #fcfcfc;
+  --ud-neutral-200: #f8f9fa;
+  --ud-neutral-300: #f1f3f5;
+  --ud-neutral-400: #e6e8eb;
+  --ud-neutral-500: #9ba1a6;
+  --ud-neutral-600: #6c7278;
+  --ud-neutral-700: #464b50;
+  --ud-neutral-800: #11181c;
+  --ud-neutral-900: #0d0f11;
+  --ud-color-success: var(--ud-positive-500);
+  --ud-color-warning: var(--ud-warning-500);
+  --ud-color-error: var(--ud-error-500);
+  --ud-color-info: var(--ud-info-500);
+  --ud-color-text: var(--ud-neutral-800);
+  --ud-color-text-muted: var(--ud-neutral-600);
+  --ud-color-bg: var(--ud-neutral-100);
+  --ud-color-surface: var(--ud-neutral-200);
+  --ud-color-border: var(--ud-neutral-400);
+}
+/* =============================================================== *\
+   Design Tokens
+
+   Farbskalen:
+   --ud-{category}-{scale} (100–900)
+   positive | warning | error | info | neutral
+
+   Beispiel: var(--ud-positive-500)
+
+   Semantische Tokens:
+   --ud-color-{success | warning | error | info | text | text-muted | bg | surface | border}
+\* =============================================================== */
+.wp-block-ud-form-overlay-addon {
+  position: relative;
+}
+.wp-block-ud-form-overlay-addon .ud-form-overlay-addon__trigger {
+  position: fixed;
+  top: 50%;
+  left: 24px;
+  margin: 0;
+  border: 0;
+  padding: 12px 20px;
+  width: auto;
+  height: auto;
+  border-radius: 999px;
+  background: #000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.168627451);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  transform: translate(-120%, -50%);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+  transition-delay: 1.5s;
+}
+.wp-block-ud-form-overlay-addon.is-ready .ud-form-overlay-addon__trigger {
+  opacity: 1;
+  transform: translate(0, -50%);
+  transition-delay: 0s;
+}
+.wp-block-ud-form-overlay-addon.is-ready .ud-form-overlay-addon__trigger:hover {
+  transform: translate(0, -50%) scale(1.05);
+}
+.wp-block-ud-form-overlay-addon .ud-form-overlay-addon__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+.wp-block-ud-form-overlay-addon.is-open .ud-form-overlay-addon__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.wp-block-ud-form-overlay-addon .ud-form-overlay-addon__backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.wp-block-ud-form-overlay-addon .ud-form-overlay-addon__panel {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 20px 0 40px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transform: translate(50%, -50%) scale(0.95);
+  transition: transform 0.35s ease;
+  z-index: 9999;
+}
+.wp-block-ud-form-overlay-addon.is-open .ud-form-overlay-addon__panel {
+  transform: translate(50%, -50%) scale(1);
+}
+.wp-block-ud-form-overlay-addon .ud-form-overlay-addon__inner {
+  padding: 36px;
+}
+.wp-block-ud-form-overlay-addon .ud-form-overlay-addon__close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.wp-block-ud-form-overlay-addon .ud-form-overlay-addon__intro {
+  margin-bottom: 16px;
+}
+.wp-block-ud-form-overlay-addon input,
+.wp-block-ud-form-overlay-addon textarea {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .wp-block-ud-form-overlay-addon .ud-form-overlay-addon__trigger {
+    top: auto;
+    left: 16px;
+    bottom: 16px;
+    transform: translateX(-120%);
+  }
+  .wp-block-ud-form-overlay-addon.is-ready .ud-form-overlay-addon__trigger {
+    transform: translateX(0);
+  }
+  .wp-block-ud-form-overlay-addon.is-ready .ud-form-overlay-addon__trigger:hover {
+    transform: translateX(0) scale(1.05);
+  }
+  .wp-block-ud-form-overlay-addon .ud-form-overlay-addon__panel {
+    width: calc(100% - 20px);
+    max-width: 100%;
+  }
+}

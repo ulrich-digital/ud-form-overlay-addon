@@ -1,0 +1,180 @@
+@use "../utils/tokens";
+/* =============================================================== *\
+   Design Tokens
+
+   Farbskalen:
+   --ud-{category}-{scale} (100–900)
+   positive | warning | error | info | neutral
+
+   Beispiel: var(--ud-positive-500)
+
+   Semantische Tokens:
+   --ud-color-{success | warning | error | info | text | text-muted | bg | surface | border}
+\* =============================================================== */
+
+.wp-block-ud-form-overlay-addon {
+	position: relative;
+
+	.ud-form-overlay-addon__trigger {
+		position: fixed;
+		top: 50%;
+		right: 24px;
+
+		margin: 0;
+		border: 0;
+		padding: 12px 20px;
+
+		width: auto;
+		height: auto;
+
+		border-radius: 999px;
+		background: #000;
+		box-shadow: 0 4px 20px #0000002b;
+
+		color: #fff;
+		font-size: 14px;
+		line-height: 1;
+
+		cursor: pointer;
+		z-index: 9999;
+
+		opacity: 0;
+		transform: translate(120%, -50%);
+
+		transition:
+			transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+			opacity 0.3s ease;
+		transition-delay: 1.5s;
+	}
+
+	&.is-ready .ud-form-overlay-addon__trigger {
+		opacity: 1;
+		transform: translate(0, -50%);
+		transition-delay: 0s;
+	}
+
+	&.is-ready .ud-form-overlay-addon__trigger:hover {
+		transform: translate(0, -50%) scale(1.05);
+	}
+
+	.ud-form-overlay-addon__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		margin: 0;
+		border: 0;
+		padding: 0;
+
+		width: 100vw;
+		height: 100vh;
+
+		background: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+
+		opacity: 0;
+		pointer-events: none;
+
+		transition: opacity 0.3s ease;
+		z-index: 9999;
+	}
+
+	&.is-open .ud-form-overlay-addon__overlay {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.ud-form-overlay-addon__backdrop {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+	}
+
+	.ud-form-overlay-addon__panel {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+
+		margin: 0;
+		border: 0;
+		padding: 0;
+
+		width: 90%;
+		max-width: 600px;
+		height: auto;
+		max-height: 90vh;
+
+		border-radius: 16px;
+		background: #fff;
+		box-shadow: -20px 0 40px rgba(0, 0, 0, 0.2);
+
+		overflow-y: auto;
+		transform: translate(-50%, -50%) scale(0.95);
+		transition: transform 0.35s ease;
+		z-index: 9999;
+	}
+
+	&.is-open .ud-form-overlay-addon__panel {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	.ud-form-overlay-addon__inner {
+		padding: 36px;
+	}
+
+	.ud-form-overlay-addon__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+
+		margin: 0;
+		border: 0;
+		padding: 0;
+
+		width: 30px;
+		height: 30px;
+
+		background: transparent;
+
+		font-size: 20px;
+		line-height: 1;
+
+		cursor: pointer;
+	}
+
+	.ud-form-overlay-addon__intro {
+		margin-bottom: 16px;
+	}
+
+	input,
+	textarea {
+		margin: 0;
+	}
+
+	@media (max-width: 600px) {
+		.ud-form-overlay-addon__trigger {
+			top: auto;
+			right: 16px;
+			bottom: 16px;
+
+			transform: translateX(120%);
+		}
+
+		&.is-ready .ud-form-overlay-addon__trigger {
+			transform: translateX(0);
+		}
+
+		&.is-ready .ud-form-overlay-addon__trigger:hover {
+			transform: translateX(0) scale(1.05);
+		}
+
+		.ud-form-overlay-addon__panel {
+			width: calc(100% - 20px);
+			max-width: 100%;
+		}
+	}
+}

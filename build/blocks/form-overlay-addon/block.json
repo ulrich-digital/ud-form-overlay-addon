@@ -1,0 +1,38 @@
+{
+  "apiVersion": 3,
+  "name": "ud/form-overlay-addon",
+  "title": "UD Block: Form Overlay Addon",
+  "category": "design",
+  "icon": "screenoptions",
+  "description": "Blendet ein Formular als Overlay über einen Trigger-Button ein.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "formType": {
+      "type": "string",
+      "default": "fluentform"
+    },
+    "formId": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "Formular öffnen"
+    },
+    "panelTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "panelIntro": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "form-overlay-addon-ud",
+  "editorScript": "file:../../../build/form-overlay-addon-editor-script.js",
+  "editorStyle": "file:../../../build/form-overlay-addon-editor-style.css",
+  "script": "file:../../../build/form-overlay-addon-frontend-script.js",
+  "style": "file:../../../build/form-overlay-addon-frontend-style.css"
+}
