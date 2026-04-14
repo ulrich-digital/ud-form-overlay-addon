@@ -1,6 +1,8 @@
 # UD Block: Form Overlay Addon
 
-Blendet ein Formular als Overlay über einen Trigger-Button ein. Ideal für Kontaktformulare, Anfragen oder CTA-basierte Interaktionen, ohne die Seite zu verlassen.
+Blendet ein Formular als Overlay über einen Trigger-Button ein. 
+
+**Hinweis:** Der Block ist aktuell für **Fluent Forms** ausgelegt und benötigt eine gültige Formular-ID.
 
 ---
 
@@ -74,6 +76,7 @@ Beim Klick auf den Button öffnet sich ein modales Overlay mit dem Formular.
   ```php
   [fluentform id="123"]
   ```
+- **Andere Formular-Plugins werden aktuell nicht unterstützt**
 
 - Ohne gesetzte Form-ID wird ein Hinweis ausgegeben
 
