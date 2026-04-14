@@ -93,7 +93,10 @@ Beim Klick auf den Button öffnet sich ein modales Overlay mit dem Formular.
 
 ## Voraussetzungen
 
-- Installiertes Formular-Plugin (z. B. Fluent Forms)
+- Installiertes und aktives **Fluent Forms** Plugin
+- Vorhandenes Formular mit gültiger **Form-ID**
+
+Ohne Fluent Forms kann der Block kein Formular anzeigen.
 
 ---
 
