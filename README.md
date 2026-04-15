@@ -30,7 +30,7 @@ Optional können Titel und Einleitungstext im Overlay definiert werden.
 
 ## Editor
 
-![Screenshot Editor](./assets/editor.png)
+![Screenshot Editor](./assets/ud-form-overlay-addon-editor.png)
 
 Screenshot des Blocks im Editor mit Formular-Auswahl und Textfeldern.  
 Text kann direkt im Block bearbeitet werden (Button-Label, Titel, Intro).
