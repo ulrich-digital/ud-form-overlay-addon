@@ -64,7 +64,7 @@ Text kann direkt im Block bearbeitet werden (Button-Label, Titel, Intro).
 
 ## Frontend
 
-![Screenshot Frontend](./assets/frontend.png)
+![Screenshot Frontend](./assets/ud-form-overlay_addon-front.png)
 
 Beim Klick auf den Button öffnet sich ein modales Overlay mit dem Formular.
 
