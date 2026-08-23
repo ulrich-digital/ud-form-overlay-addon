@@ -1,4 +1,6 @@
 {
+  "author": "ulrich.digital gmbh",
+  "license": "SEE LICENSE IN LICENSE",
   "name": "ud-form-overlay-addon",
   "version": "1.0.0",
   "private": true,

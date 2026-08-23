@@ -1,6 +1,6 @@
 # UD Block: Form Overlay Addon
 
-Blendet ein Formular als Overlay über einen Trigger-Button ein. 
+Blendet ein Formular als Overlay über einen Trigger-Button ein.
 
 **Hinweis:** Der Block ist aktuell für **Fluent Forms** ausgelegt und benötigt eine gültige Formular-ID.
 
@@ -32,7 +32,7 @@ Optional können Titel und Einleitungstext im Overlay definiert werden.
 
 ![Screenshot Editor](./assets/ud-form-overlay-addon-editor.png)
 
-Screenshot des Blocks im Editor mit Formular-Auswahl und Textfeldern.  
+Screenshot des Blocks im Editor mit Formular-Auswahl und Textfeldern.
 Text kann direkt im Block bearbeitet werden (Button-Label, Titel, Intro).
 
 ---
@@ -41,23 +41,23 @@ Text kann direkt im Block bearbeitet werden (Button-Label, Titel, Intro).
 
 ### Formular
 
-- **Form Type**  
+- **Form Type**
   Aktuell vorbereitet für Fluent Forms
 
-- **Form ID**  
+- **Form ID**
   ID des Formulars (z. B. aus Fluent Forms)
 
 ---
 
 ### Inhalt
 
-- **Button Label**  
+- **Button Label**
   Text des Trigger-Buttons
 
-- **Panel Title** *(optional)*  
+- **Panel Title** *(optional)*
   Titel im Overlay
 
-- **Panel Intro** *(optional)*  
+- **Panel Intro** *(optional)*
   Einleitungstext oberhalb des Formulars
 
 ---
@@ -100,11 +100,20 @@ Ohne Fluent Forms kann der Block kein Formular anzeigen.
 
 ---
 
+## Einblicke in die Umsetzung
+
+Der Beitrag gibt Einblick in die entwickelte Lösung und ihre Funktionsweise.
+
+- **Mehr zur Lösung:** [Kontaktformular in WordPress als Overlay öffnen](https://ulrich.digital/formular-als-overlay-in-wordpress-oeffnen/)
+
 ## Autor
 
 [ulrich.digital gmbh](https://ulrich.digital)
 
 ## Lizenz
 
-GPL v2 or later  
-https://www.gnu.org/licenses/gpl-2.0.html
+Dieses Projekt steht unter der [ulrich.digital Nutzungslizenz 1.0](LICENSE).
+
+Die unveränderte Software darf in eigenen und kommerziellen Projekten eingesetzt werden. Auf jeder öffentlich erreichbaren Website oder Anwendung muss [ulrich.digital gmbh](https://ulrich.digital) im Impressum, in einem Credits-Bereich oder auf einer vergleichbaren Informationsseite genannt werden. Verkauf, eigenständige Weitergabe, Unterlizenzierung und Änderungen bedürfen der vorherigen schriftlichen Zustimmung von ulrich.digital gmbh.
+
+Komponenten Dritter behalten ihre jeweiligen Lizenz- und Nutzungsbedingungen.
